@@ -1,5 +1,5 @@
 # Create an S3 bucket
-resource "aws_s3_bucket" "my_bucket" {
+resource "aws_s3_bucket" "my_bucket_1" {
   bucket = "sahil-abc-bucket-harness" # Change this to a unique bucket name
   acl    = "private"                # Set the desired ACL (e.g., private, public-read)
 
