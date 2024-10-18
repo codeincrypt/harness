@@ -1,8 +1,3 @@
-# Specify the provider
-provider "aws" {
-  region = "us-east-1" # Change this to your preferred region
-}
-
 # Create an S3 bucket
 resource "aws_s3_bucket" "my_bucket" {
   bucket = "sahil-abc-bucket-harness" # Change this to a unique bucket name
