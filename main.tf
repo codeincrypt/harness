@@ -21,6 +21,6 @@ resource "aws_s3_bucket" "my_bucket_1" {
 }
 
 # Optional: Output the bucket name
-output "bucket_name" {
+output "bucket_name_1" {
   value = aws_s3_bucket.my_bucket.bucket
 }
