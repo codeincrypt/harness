@@ -2,10 +2,12 @@ provider "aws" {
   region = "us-east-1"  # Change this to your preferred region
 }
 
-# Fetch all S3 buckets
-data "aws_s3_buckets" "all_buckets" {}
+resource "null_resource" "list_buckets" {
+  provisioner "local-exec" {
+    command = "aws s3api list-buckets --query 'Buckets[*].Name' --output json"
+  }
+}
 
-# Output the bucket names
 output "bucket_names" {
-  value = data.aws_s3_buckets.all_buckets.ids
+  value = null_resource.list_buckets.id
 }
