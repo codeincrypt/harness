@@ -2,8 +2,8 @@ provider "aws" {
   region = "us-east-1"  # Change to your preferred region
 }
 
-data "aws_s3_buckets" "all_buckets" {}
+data "aws_s3_bucket" "all_bucket" {}
 
 output "bucket_names" {
-  value = data.aws_s3_buckets.all_buckets.ids
+  value = data.aws_s3_buckes.all_bucket.id
 }
